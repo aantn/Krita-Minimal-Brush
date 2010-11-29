@@ -1,9 +1,9 @@
 set(kritaminimalpaintop_PART_SRCS
     minimal_paintop_plugin.cpp
-    krita_minimal_paintop.cpp
-    krita_minimalop_option.cpp
-    krita_minimal_paintop_settings.cpp
-    krita_minimal_paintop_settings_widget.cpp
+    kis_minimal_paintop.cpp
+    kis_minimalop_option.cpp
+    kis_minimal_paintop_settings.cpp
+    kis_minimal_paintop_settings_widget.cpp
     minimal_brush.cpp	
     )
 

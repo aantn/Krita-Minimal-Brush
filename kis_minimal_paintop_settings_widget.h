@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2008-2010 Lukáš Tvrdý <lukast.dev@gmail.com>
+ *  Copyright (c) 2008 Lukas Tvrdy <lukast.dev@gmail.com>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -16,31 +16,32 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-#ifndef MINIMAL_BRUSH_H_
-#define MINIMAL_BRUSH_H_
+#ifndef KIS_MINIMALPAINTOP_SETTINGS_WIDGET_H_
+#define KIS_MINIMALPAINTOP_SETTINGS_WIDGET_H_
 
-#include <QVector>
+#include <kis_paintop_options_widget.h>
 
-#include <KoColor.h>
+#include "ui_wdgminimaloptions.h"
 
-#include "kis_minimalop_option.h"
-#include "kis_paint_device.h"
+class KisPaintActionTypeOption;
+class KisMinimalOpOption;
+class KisPressureOpacityOption;
 
-class MinimalBrush
+class KisMinimalPaintOpSettingsWidget : public KisPaintOpOptionsWidget
 {
+    Q_OBJECT
 
 public:
-    MinimalBrush(const MinimalProperties * properties, KoColorTransformation* transformation);
-    ~MinimalBrush();
-    void paint(KisPaintDeviceSP dev, qreal x, qreal y, const KoColor &color);
+    KisMinimalPaintOpSettingsWidget(QWidget* parent = 0);
+    virtual ~KisMinimalPaintOpSettingsWidget();
 
-private:
-    KoColor m_inkColor;
-    int m_counter;
-    const MinimalProperties * m_properties;
-    KoColorTransformation* m_transfo;
-    int m_saturationId;
+    KisPropertiesConfiguration* configuration() const;
+    
+    ///Reimplemented
+    void changePaintOpSize(qreal x, qreal y);
 
+public:
+    KisMinimalOpOption* m_minimalOption;
 };
 
 #endif
