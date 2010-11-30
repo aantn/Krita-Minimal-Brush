@@ -15,7 +15,7 @@
  *  along with this program; if not, write to the Free Software
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
  */
-#include "kis_minimalop_option.h"
+#include "kis_minimal_paintop_options.h"
 
 #include "ui_wdgminimaloptions.h"
 

@@ -1,7 +1,7 @@
 set(kritaminimalpaintop_PART_SRCS
     minimal_paintop_plugin.cpp
     kis_minimal_paintop.cpp
-    kis_minimalop_option.cpp
+    kis_minimal_paintop_options.cpp
     kis_minimal_paintop_settings.cpp
     kis_minimal_paintop_settings_widget.cpp
     )

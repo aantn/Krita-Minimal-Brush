@@ -18,7 +18,7 @@
 
 #include "kis_minimal_paintop_settings_widget.h"
 
-#include "kis_minimalop_option.h"
+#include "kis_minimal_paintop_options.h"
 #include "kis_minimal_paintop_settings.h"
 
 #include <kis_paintop_options_widget.h>

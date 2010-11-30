@@ -18,7 +18,7 @@
 
 #include "kis_minimal_paintop_settings.h"
 
-#include <kis_minimalop_option.h>
+#include <kis_minimal_paintop_options.h>
 
 #include <kis_paint_action_type_option.h>
 #include <kis_airbrush_option.h>
