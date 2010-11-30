@@ -37,7 +37,7 @@
 
 #include <kis_pressure_opacity_option.h>
 
-KisMinimalPaintOp::KisMinimalPaintOp(const KisMinimalPaintOpSettings *settings, KisPainter * painter, KisImageWSP image)
+KisMinimalPaintOp::KisMinimalPaintOp(KisMinimalPaintOpSettings *settings, KisPainter * painter, KisImageWSP image)
         : KisPaintOp(painter)
 {
 }

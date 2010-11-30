@@ -23,7 +23,6 @@
 #include <kis_paintop.h>
 #include <kis_types.h>
 
-#include "minimal_brush.h"
 #include "kis_minimal_paintop_settings.h"
 
 class KisPainter;
@@ -39,10 +38,6 @@ public:
     qreal paintAt(const KisPaintInformation& info);
 
 private:
-    KisPaintDeviceSP m_dab;
-    MinimalBrush * m_minimalBrush;
-    KisPressureOpacityOption m_opacityOption;
-    MinimalProperties m_properties;
 };
 
 #endif // KIS_MINIMAL_PAINTOP_H_

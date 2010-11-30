@@ -31,9 +31,6 @@
 #include "kis_minimal_paintop.h"
 #include "kis_simple_paintop_factory.h"
 
-#include "kis_minimal_paintop_settings.h"
-#include "kis_minimal_paintop_settings_widget.h"
-
 #include "kis_global.h"
 
 K_PLUGIN_FACTORY(MinimalPaintOpPluginFactory, registerPlugin<MinimalPaintOpPlugin>();)
