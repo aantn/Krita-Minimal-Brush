@@ -48,4 +48,5 @@ KisMinimalPaintOp::~KisMinimalPaintOp()
 
 qreal KisMinimalPaintOp::paintAt(const KisPaintInformation& info)
 {
+	return 1.0
 }
