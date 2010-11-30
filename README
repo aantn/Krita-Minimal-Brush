@@ -13,4 +13,5 @@ How to use:
 	* Add the following line to koffice/krita/plugins/paintops/CMakeLists.txt:
 		* add_subdirectory( mypaintop )
 	* You know have a working paintop. You can compile to check that everything works,
-	  or start adding code so that the paintop does something.
+	  or start adding code so that the paintop does something. You should also fix the
+	  copyright notices at the top of all .h and .cpp files.
