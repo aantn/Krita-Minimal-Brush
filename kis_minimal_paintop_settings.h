@@ -23,20 +23,11 @@
 #include <kis_brush_based_paintop_settings.h>
 #include <kis_types.h>
 
-#include <kis_pressure_opacity_option.h>
-
 #include <opengl/kis_opengl.h>
 
 #if defined(_WIN32) || defined(_WIN64)
 # include <windows.h>
 #endif
-
-class QWidget;
-class QString;
-
-class QDomElement;
-class QDomDocument;
-
 
 class KisMinimalPaintOpSettings : public KisBrushBasedPaintOpSettings
 {
