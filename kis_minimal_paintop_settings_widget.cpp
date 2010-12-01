@@ -23,9 +23,6 @@
 
 #include <kis_paintop_options_widget.h>
 
-#include <kis_paint_action_type_option.h>
-#include <kis_airbrush_option.h>
-
 KisMinimalPaintOpSettingsWidget:: KisMinimalPaintOpSettingsWidget(QWidget* parent)
         : KisBrushBasedPaintopOptionWidget(parent)
 {
