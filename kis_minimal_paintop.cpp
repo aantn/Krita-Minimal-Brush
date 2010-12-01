@@ -47,7 +47,11 @@ KisMinimalPaintOp::~KisMinimalPaintOp()
 {
 }
 
+// Use this method to paint each point that is pressed. Yo can also
+// override the paintLine method and use that to paint from a starting
+// point to an end point
 qreal KisMinimalPaintOp::paintAt(const KisPaintInformation& info)
 {
 	return 1.0;
 }
+
