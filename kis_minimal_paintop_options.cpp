@@ -33,10 +33,7 @@ KisMinimalOpOption::KisMinimalOpOption()
 {
     m_checkable = false;
     m_options = new KisMinimalOpOptionsWidget();
-    connect(m_options->radiusSpinBox, SIGNAL(valueChanged(int)), SIGNAL(sigSettingChanged()));
-    connect(m_options->inkDepletionCHBox, SIGNAL(clicked(bool)), SIGNAL(sigSettingChanged()));
-    connect(m_options->opacity, SIGNAL(clicked(bool)), SIGNAL(sigSettingChanged()));
-    connect(m_options->saturation, SIGNAL(clicked(bool)), SIGNAL(sigSettingChanged()));
+    connect(m_options->exampleWidget, SIGNAL(valueChanged(int)), SIGNAL(sigSettingChanged()));
 
     setConfigurationPage(m_options);
 }
@@ -46,52 +43,26 @@ KisMinimalOpOption::~KisMinimalOpOption()
     // delete m_options;
 }
 
-int KisMinimalOpOption::radius() const
+int KisMinimalOpOption::exampleSetting() const
 {
-    return m_options->radiusSpinBox->value();
+    return m_options->exampleWidget->value();
 }
 
 
-void KisMinimalOpOption::setRadius(int radius) const
+void KisMinimalOpOption::setExampleSetting(int exampleSetting) const
 {
-    m_options->radiusSpinBox->setValue( radius );
-}
-
-
-
-bool KisMinimalOpOption::inkDepletion() const
-{
-    return m_options->inkDepletionCHBox->isChecked();
-}
-
-
-
-bool KisMinimalOpOption::opacity() const
-{
-    return m_options->opacity->isChecked();
-}
-
-
-bool KisMinimalOpOption::saturation() const
-{
-    return m_options->saturation->isChecked();
+    m_options->exampleWidget->setValue( exampleSetting );
 }
 
 
 void KisMinimalOpOption::writeOptionSetting(KisPropertiesConfiguration* setting) const
 {
-    setting->setProperty(MINIMAL_RADIUS, radius());
-    setting->setProperty(MINIMAL_INK_DEPLETION, inkDepletion());
-    setting->setProperty(MINIMAL_USE_OPACITY, opacity());
-    setting->setProperty(MINIMAL_USE_SATURATION, saturation());
+    setting->setProperty(EXAMPLE_SETTING, exampleSetting());
 }
 
 void KisMinimalOpOption::readOptionSetting(const KisPropertiesConfiguration* setting)
 {
-    m_options->radiusSpinBox->setValue(setting->getInt(MINIMAL_RADIUS));
-    m_options->inkDepletionCHBox->setChecked(setting->getBool(MINIMAL_INK_DEPLETION));
-    m_options->opacity->setChecked(setting->getBool(MINIMAL_USE_OPACITY));
-    m_options->saturation->setChecked(setting->getBool(MINIMAL_USE_SATURATION));
+    m_options->exampleWidget->setValue(setting->getInt(EXAMPLE_SETTING));
 }
 
 

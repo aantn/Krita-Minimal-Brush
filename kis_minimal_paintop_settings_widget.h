@@ -20,6 +20,7 @@
 #define KIS_MINIMALPAINTOP_SETTINGS_WIDGET_H_
 
 #include <kis_paintop_options_widget.h>
+#include <kis_brush_based_paintop_options_widget.h>
 
 #include "ui_wdgminimaloptions.h"
 
@@ -27,7 +28,7 @@ class KisPaintActionTypeOption;
 class KisMinimalOpOption;
 class KisPressureOpacityOption;
 
-class KisMinimalPaintOpSettingsWidget : public KisPaintOpOptionsWidget
+class KisMinimalPaintOpSettingsWidget : public KisBrushBasedPaintopOptionWidget
 {
     Q_OBJECT
 
@@ -36,9 +37,6 @@ public:
     virtual ~KisMinimalPaintOpSettingsWidget();
 
     KisPropertiesConfiguration* configuration() const;
-    
-    ///Reimplemented
-    void changePaintOpSize(qreal x, qreal y);
 
 public:
     KisMinimalOpOption* m_minimalOption;

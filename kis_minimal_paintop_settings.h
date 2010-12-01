@@ -20,6 +20,7 @@
 #define KIS_MINIMAL_PAINTOP_SETTINGS_H_
 
 #include <kis_paintop_settings.h>
+#include <kis_brush_based_paintop_settings.h>
 #include <kis_types.h>
 
 #include <kis_pressure_opacity_option.h>
@@ -37,19 +38,13 @@ class QDomElement;
 class QDomDocument;
 
 
-class KisMinimalPaintOpSettings : public KisPaintOpSettings
+class KisMinimalPaintOpSettings : public KisBrushBasedPaintOpSettings
 {
 
 public:
     KisMinimalPaintOpSettings();
     virtual ~KisMinimalPaintOpSettings() {}
 
-    virtual QPainterPath brushOutline(const QPointF& pos, OutlineMode mode, qreal scale = 1.0, qreal rotation = 0.0) const;
-
-    bool paintIncremental();
-    bool isAirbrushing() const;
-    int rate() const;
-    
 #if defined(HAVE_OPENGL)
     QString modelName() const;
 #endif

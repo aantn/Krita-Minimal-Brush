@@ -27,36 +27,6 @@ KisMinimalPaintOpSettings::KisMinimalPaintOpSettings()
 {
 }
 
-bool KisMinimalPaintOpSettings::paintIncremental()
-{
-    return (enumPaintActionType)getInt("PaintOpAction", WASH) == BUILDUP;
-}
-
-bool KisMinimalPaintOpSettings::isAirbrushing() const
-{
-    return getBool(AIRBRUSH_ENABLED);
-}
-
-int KisMinimalPaintOpSettings::rate() const
-{
-    return getInt(AIRBRUSH_RATE);
-}
-
-QPainterPath KisMinimalPaintOpSettings::brushOutline(const QPointF& pos, KisPaintOpSettings::OutlineMode mode, qreal scale, qreal rotation) const
-{
-    Q_UNUSED(scale);
-    Q_UNUSED(rotation);
-    QPainterPath path;
-    if (mode == CursorIsOutline){
-        qreal size = getInt(MINIMAL_RADIUS) * 2 + 1;
-        QRectF rc(0, 0, size, size);
-        rc.translate(-rc.center());
-        path.addEllipse(rc);
-        path.translate(pos);
-    }
-    return path;
-}
-
 #if defined(HAVE_OPENGL)
 QString KisMinimalPaintOpSettings::modelName() const
 {

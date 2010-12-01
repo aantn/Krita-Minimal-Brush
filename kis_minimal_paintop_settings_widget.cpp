@@ -22,11 +22,12 @@
 #include "kis_minimal_paintop_settings.h"
 
 #include <kis_paintop_options_widget.h>
+
 #include <kis_paint_action_type_option.h>
 #include <kis_airbrush_option.h>
 
 KisMinimalPaintOpSettingsWidget:: KisMinimalPaintOpSettingsWidget(QWidget* parent)
-        : KisPaintOpOptionsWidget(parent)
+        : KisBrushBasedPaintopOptionWidget(parent)
 {
     m_minimalOption =  new KisMinimalOpOption();
 
@@ -44,12 +45,4 @@ KisPropertiesConfiguration*  KisMinimalPaintOpSettingsWidget::configuration() co
     config->setProperty("paintop", "minimalbrush"); // XXX: make this a const id string
     writeConfiguration(config);
     return config;
-}
-
-void KisMinimalPaintOpSettingsWidget::changePaintOpSize(qreal x, qreal y)
-{
-    // if the movement is more left<->right then up<->down
-    if (qAbs(x) > qAbs(y)){
-        m_minimalOption->setRadius( m_minimalOption->radius() + qRound(x) );
-    }
 }

@@ -21,11 +21,7 @@
 #include <kis_paintop_option.h>
 #include <krita_export.h>
 
-const QString MINIMAL_RADIUS = "Minimal/radius";
-const QString MINIMAL_INK_DEPLETION = "Minimal/inkDepletion";
-const QString MINIMAL_USE_OPACITY = "Minimal/opacity";
-const QString MINIMAL_USE_SATURATION = "Minimal/saturation";
-
+const QString EXAMPLE_SETTING = "Minimal/example";
 class KisMinimalOpOptionsWidget;
 
 class KisMinimalOpOption : public KisPaintOpOption
@@ -34,12 +30,8 @@ public:
     KisMinimalOpOption();
     ~KisMinimalOpOption();
 
-    void setRadius(int radius) const;
-    int radius() const;
-
-    bool inkDepletion() const; 
-    bool saturation() const;
-    bool opacity() const;
+    void setExampleSetting(int exampleSetting) const;
+    int exampleSetting() const;
     
     void writeOptionSetting(KisPropertiesConfiguration* setting) const;
     void readOptionSetting(const KisPropertiesConfiguration* setting);
@@ -53,16 +45,10 @@ private:
 
 class MinimalProperties{
 public:
-    int radius;
-    bool inkDepletion;
-    bool useOpacity;
-    bool useSaturation;
+    int exampleSetting;;
     
     void readOptionSetting(const KisPropertiesConfiguration* settings){
-            radius = settings->getInt(MINIMAL_RADIUS);
-            inkDepletion = settings->getBool(MINIMAL_INK_DEPLETION);
-            useOpacity = settings->getBool(MINIMAL_USE_OPACITY);
-            useSaturation = settings->getBool(MINIMAL_USE_SATURATION);
+            exampleSetting = settings->getInt(EXAMPLE_SETTING);
     }
 };
 
