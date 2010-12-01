@@ -33,12 +33,13 @@
 #include <kis_painter.h>
 #include <kis_types.h>
 #include <kis_paintop.h>
+#include <kis_brush_based_paintop.h>
 #include <kis_paint_information.h>
 
 #include <kis_pressure_opacity_option.h>
 
 KisMinimalPaintOp::KisMinimalPaintOp(const KisMinimalPaintOpSettings *settings, KisPainter * painter, KisImageWSP image)
-        : KisPaintOp(painter)
+        : KisBrushBasedPaintOp(settings, painter)
 {
 }
 

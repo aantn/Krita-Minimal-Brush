@@ -20,13 +20,14 @@
 #define KIS_MINIMAL_PAINTOP_H_
 
 #include <kis_paintop.h>
+#include <kis_brush_based_paintop.h>
 #include <kis_types.h>
 
 #include "kis_minimal_paintop_settings.h"
 
 class KisPainter;
 
-class KisMinimalPaintOp : public KisPaintOp
+class KisMinimalPaintOp : public KisBrushBasedPaintOp
 {
 
 public:
