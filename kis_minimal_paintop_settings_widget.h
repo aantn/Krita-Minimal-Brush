@@ -24,9 +24,7 @@
 
 #include "ui_wdgminimaloptions.h"
 
-class KisPaintActionTypeOption;
 class KisMinimalOpOption;
-class KisPressureOpacityOption;
 
 class KisMinimalPaintOpSettingsWidget : public KisBrushBasedPaintopOptionWidget
 {
