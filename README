@@ -12,6 +12,6 @@ How to use:
 		* ls ./* | awk '{print("mv "$1" "$1)}' | sed 's/minimal/mypaintop/2' | /bin/sh
 	* Add the following line to koffice/krita/plugins/paintops/CMakeLists.txt:
 		* add_subdirectory( mypaintop )
-	* You know have a working paintop. You can compile to check that everything works,
+	* You now have a working paintop. You can compile to check that everything works,
 	  or start adding code so that the paintop does something. You should also fix the
 	  copyright notices at the top of all .h and .cpp files.

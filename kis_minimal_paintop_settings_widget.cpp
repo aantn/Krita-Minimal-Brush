@@ -30,7 +30,6 @@ KisMinimalPaintOpSettingsWidget:: KisMinimalPaintOpSettingsWidget(QWidget* paren
         : KisBrushBasedPaintopOptionWidget(parent)
 {
     m_minimalOption =  new KisMinimalOpOption();
-
     addPaintOpOption(m_minimalOption);
 }
 
